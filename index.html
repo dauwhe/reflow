@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>L’ebook reflowable text</title>
+	<title>The Reflowable Ebook</title>
   <link rel="stylesheet" href="css/styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <noscript>
@@ -16,17 +16,17 @@
 <body>
 <main>
   <header>
-    <h1>L’ebook redistribuable</h1>
+    <h1>The Reflowable Ebook</h1>
 
-    <p class="lead">Une introduction rapide et interactive à l’usage des&nbsp;éditeurs, graphistes et simples&nbsp;curieux.</p>
+    <p class="lead">A  quick and interactive introduction for editors,  designers, and the simply curious</p>
 
-    <p class="author">Par Jiminy Panoz</p>
+    <p class="author">By Jiminy Panoz</p>
   </header>
 
   <aside class="warning">
-    <p>Il semblerait que JavaScript ne soit pas activé dans votre navigateur.</p>
+    <p>JavaScript is disabled in your browser.</p>
 
-    <p>Les démonstrations interactives ont par conséquent été désactivées.</p>
+    <p>The interactive demonstrations will not work.</p>
   </aside>
 
   <section>
@@ -38,45 +38,45 @@
 
     <h2>Introduction</h2>
 
-    <p>On parle très souvent de formats, de modèles économiques, de parts de marché, d’enrichissement ou de disruption mais <mark class="tldr">nous en oublions souvent un essentiel&nbsp;: le design du livre.</mark></p>
+    <p>We often speak of formats, business models,  enrichment or disruption<mark class="tldr">but we sometimes forget something important:  the design of the book.</mark></p>
 
-    <p>Au cours de ces dernières années, j’ai pu me rendre compte que beaucoup d’éditeurs et de graphistes se sentaient perdus à ce sujet.</p>
+    <p>Over the past few years, I have realized that many publishers and graphic designers are feeling confused.</p>
 
-    <p>Qu’est-il possible de faire et comment&nbsp;?</p>
+    <p>What is possible, and how?</p>
 
-    <p>Est-ce que tel logiciel de <abbr title="Publication Assistée par Ordinateur" class="sc">P.A.O.</abbr> est capable de le faire directement&nbsp;?</p>
+    <p>Can desktop publishing software do this directly?</p>
 
-    <p>Pourquoi la mise en page bogue dans telle ou telle application de lecture&nbsp;?</p>
+    <p>Why are there layout bugs in a particular reading system?</p>
 
-    <p>Est-ce que nous pouvons rajouter quelques interactions&nbsp;?</p>
+    <p>Can we add interactions?</p>
 
-    <p>Quelles contraintes prendre en compte&nbsp;?</p>
+    <p>What constraints should be taken into account?</p>
 
-    <p>Autant de questions dont les réponses restent vagues et qui demandent très régulièrement des éclaircissements.</p>
+    <p>These questions are vague, and require clarification.</p>
 
-    <p>L’objectif de cette page est par conséquent de <mark class="tldr">donner les clés du livre numérique redistribuable</mark>, aussi connu sous le nom d’<i lang="en">ebook reflowable text.</i></p>
+    <p>The object of this page is to est par conséquent de <mark class="tldr">donner les clés du livre numérique redistribuable</mark>, aussi connu sous le nom d’<i lang="en">ebook reflowable text.</i></p>
   </section>
 
   <section>
-    <h2>Le livre numérique, c’est du&nbsp;web</h2>
+    <h2>Ebooks are from the web</h2>
 
     <p>Même si nous n’allons pas nous plonger dans les méandres techniques du livre numérique et, plus particulièrement, du standard <abbr class="sc">EPUB</abbr>, il n’est pas inutile de rappeler que celui-ci <mark class="tldr">emprunte les langages du web.</mark></p>
 
     <p>Un livre numérique au format <abbr class="sc">EPUB</abbr> c’est&nbsp;:</p>
 
     <ul>
-      <li>une structure en <abbr class="sc">HTML</abbr> (<i lang="en">HyperText Markup Language</i>)&nbsp;;</li>
-      <li>une mise en pages en <abbr class="sc">CSS</abbr> (<i lang="en">Cascading Style Sheets</i>)&nbsp;;</li>
-      <li>des interactions en <abbr class="sc">JS</abbr> (<i lang="en">JavaScript</i>)&nbsp;;</li>
-      <li>des images vectorielles en <abbr class="sc">SVG</abbr> (<i lang="en">Scalable Vector Graphics</i>).</li>
+      <li>Content in <abbr class="sc">HTML</abbr> (<i lang="en">HyperText Markup Language</i>)&nbsp;;</li>
+      <li>Laid out with <abbr class="sc">CSS</abbr> (<i lang="en">Cascading Style Sheets</i>)&nbsp;;</li>
+      <li>Made interactive with <abbr class="sc">JS</abbr> (<i lang="en">JavaScript</i>)&nbsp;;</li>
+      <li>Vector images in <abbr class="sc">SVG</abbr> (<i lang="en">Scalable Vector Graphics</i>).</li>
     </ul>
 
-    <p>La structure <abbr class="sc">HTML</abbr> se présente ainsi :</p>
+    <p>The <abbr class="sc">HTML</abbr> structure looks like this:</p>
 
     <div class="full-width inherit-grid bg-container">
-      <pre><code>&lt;h1&gt;Titre du chapitre&lt;/h1&gt;
+      <pre><code>&lt;h1&gt;Chapter Title&lt;/h1&gt;
 
-&lt;p&gt;Le premier paragraphe de notre chapitre, une &lt;em&gt;emphase&lt;/em&gt; vient accentuer un mot de la phrase.&lt;/p&gt;
+&lt;p&gt;The first paragraph of our chapter, une &lt;em&gt;emphase&lt;/em&gt; vient accentuer un mot de la phrase.&lt;/p&gt;
 
 &lt;blockquote&gt;
  &lt;p&gt;Voici le premier paragraphe d’une citation en bloc.&lt;/p&gt;
@@ -89,9 +89,9 @@
 &lt;/figure&gt;</code></pre>
     </div>
 
-    <p><mark class="tldr">Cette structure permet aux solutions de lecture de comprendre le texte</mark> et de pouvoir faire la différence entre les contenus (titre, citation, illustration, etc.). Cela servira notamment pour la synthèse vocale.</p>
+    <p><mark class="tldr">This structure allows the reading system to understand the text</mark> and to differentiate between the various elements (title, quotation, illustration, etc.). This is also used for speech synthesis.</p>
 
-    <p>Quant à la mise en pages <abbr class="sc">CSS</abbr>…</p>
+    <p>As for the design with <abbr class="sc">CSS</abbr>…</p>
 
     <div class="full-width inherit-grid bg-container">
       <pre><code>p {
@@ -102,7 +102,7 @@
 }</code></pre>
     </div>
 
-    <p>Dans cet exemple, nous déclarons des styles pour tous les paragraphes de l’ouvrage (taille, interlignage, marges et retrait de la première ligne).</p>
+    <p>In this example, we declare styles for all the paragraphs in the book (size, leading, margins, and indentation of the first line).</p>
 
     <figure class="full-width inherit-grid floating-caption">
       <picture>
@@ -110,45 +110,45 @@
         <source media="(min-width: 1366px)" srcset="assets/1800/fluide-3x.png">
         <img alt="Le contenu d’un fichier EPUB affiché à l’écran n’est pas le même en fonction des dimensions de l’écran. Un smartphone affichera moins de contenu qu’une liseuse ou qu’une tablette." src="assets/900/fluide.png" />
       </picture>
-      <figcaption>Contrairement à un <abbr class="sc">PDF</abbr>, qui est mis à l’échelle, le contenu <abbr class="sc">HTML</abbr> s’adapte automatiquement aux dimensions de&nbsp;l’écran.</figcaption>
+      <figcaption>Unlike <abbr class="sc">PDF</abbr>, which is scaled, the content <abbr class="sc">HTML</abbr> automatically adapts to the content of the screen.</figcaption>
     </figure>
 
-    <p>Il est extrêmement important de faire remarquer que <mark class="tldr">le contenu web est fluide par défaut</mark>&nbsp;: celui-ci est en effet <mark class="tldr">automatiquement redistribué dans la fenêtre du navigateur.</mark> Nous pourrions par exemple le comparer au bloc de texte redistribuable d’InDesign.</p>
+    <p>It is important to note that <mark class="tldr">web content is fluid by default.</mark>: it is indeed <mark class="tldr">automatically reflowed in the browser window.</mark> For example, we could compare it to the reflowable text block in InDesign.</p>
 
     <div class="full-width inherit-grid demo">
       <div class="demo-settings">
         <label>
-          <input type="checkbox" name="fluid-demo" value="styled" /><span class="checker"></span> <span>Ajouter des styles</span>
+          <input type="checkbox" name="fluid-demo" value="styled" /><span class="checker"></span> <span>Add styles</span>
         </label>
       </div>
       <iframe id="fluid-demo" src="demo.html"></iframe>
     </div>
 
-    <p><mark class="tldr">C’est en stylant que l’on est susceptible de dégrader cette fluidité.</mark></p>
+    <p><mark class="tldr">It is in styling that one is likely to degrade this fluidity.</mark></p>
     
-    <p>Il fut un temps où les designers web utilisaient des dimensions fixes, par exemple 800&nbsp;pixels de large. Ils pouvaient ainsi réaliser des mises en pages plus complexes&nbsp;: colonnes, objets placés au pixel près, etc. Inutile de souligner qu’ils se sont rapidement rendu compte que cette <mark class="tldr">approche de conception reposant sur des dimensions fixes ne pouvait plus fonctionner avec l’avénement des appareils mobiles.</mark></p>
+    <p>There was a time when web designers used fixed dimensions, for example 800 pixels wide. This allowed them to create more complex layouts: columns, pixel-like objects, and so on. Needless to say, they soon realized that <mark class="tldr">approaches based on fixed dimensions could no longer function with the advent of mobile devices.</mark></p>
   </section>
 
   <section>
-    <h2>Du web, à une&nbsp;différence près</h2>
+    <h2>From the web, with a difference</h2>
 
-    <p>On entend souvent dire que le livre numérique est une sorte de «&nbsp;site web empaqueté&nbsp;» mais cela ne signifie pas pour autant que tous les navigateurs web sont capables d’ouvrir un fichier <abbr class="sc">EPUB</abbr>. En effet, si les bases sont communes, <mark class="tldr"><abbr class="sc">EPUB</abbr> est une norme qui dispose de ses propres spécifications.</mark></p>
+    <p>One often hears that the digital book is a kind of “packaged web site,” but that does not mean that all web browsers are able to open an <abbr class="sc">EPUB</abbr> file. In fact, although many of the constituent parts are the same, <mark class="tldr"><abbr class="sc">EPUB</abbr> is a standard with its own specification.</mark></p>
 
-    <p>À l’heure actuelle, seul le navigateur Microsoft Edge prend nativement en charge le format.</p>
+    <p>Currently, the only browser that supports <abbr class="sc">EPUB</abbr> natively is Microsoft Edge.</p>
 
     <figure class="gutter" role="presentation">
       <img alt="" src="assets/900/apps.png" />
     </figure>
 
-    <p>Aussi, il faut généralement passer par une solution de lecture (appareil dédié, app, service dans le nuage) pour pouvoir accéder au contenu du livre numérique.</p>
+    <p>Also, it is generally necessary to go through a reading system (a dedicated device, app, or cloud service) in order to access the contents of a digital book.</p>
 
-    <p>Les solutions modernes empruntent aux navigateurs web leur moteur de rendu, un composant logiciel qui se charge, comme son nom l’indique, du rendu des pages web. On peut ainsi considérer que les solutions de lecture sont des <mark class="tldr">surcouches logicielles qui permettent la prise en charge du format et proposent une interface dédiée à l’activité de lecture.</mark></p>
+    <p>Modern solutions borrow rendering engine from the web browsers, a software component which, as the name suggests, takes care of the rendering of web pages. One can thus consider that the reading systems are <mark class="tldr">Software overlays that support formatting and provide a dedicated reading interface.</mark></p>
 
-    <p><mark class="tldr">Ces surcouches s’accompagnent de spécificités (pagination, réglages utilisateurs, etc.)</mark> qui rendent la conception et le développement d’un livre numérique quelque peu différents de ceux d’un site web.</p>
+    <p><mark class="tldr">These overlays have several specific functions, such as pagination, user settings, etc.</mark> These make the design and development of a digital book somewhat different from that of a website.</p>
   </section>
 
   <section>
-    <h2>Un changement de&nbsp;paradigme</h2>
+    <h2>A Paradigm Shift</h2>
 
     <p>Si l’on compare navigateurs web et outils <abbr class="sc">P.A.O</abbr>, force est de constater que <mark class="tldr">les moteurs de rendu web sont largement moins aboutis que ceux des logiciels auxquels nous sommes habitués.</mark></p>
 
