@@ -150,13 +150,13 @@
   <section>
     <h2>A Paradigm Shift</h2>
 
-    <p>Si l’on compare navigateurs web et outils <abbr class="sc">P.A.O</abbr>, force est de constater que <mark class="tldr">les moteurs de rendu web sont largement moins aboutis que ceux des logiciels auxquels nous sommes habitués.</mark></p>
+    <p>When comparing web browsers and desktop publishing tools , it is clear that <mark class="tldr">The web rendering engines are much less successful than those of the software to which we are accustomed.</mark></p>
 
-    <p>Les algorithmes de justification des navigateurs web sont simplistes, les fonctionnalités typographiques avancées (fonctionnalités Open Type) sont très récentes et parfois mal supportées, les grilles de composition viennent tout juste d’arriver, le modèle de fragmentation (pagination) est encore inexistant…</p>
+    <p>Web browser justification algorithms are simplistic, advanced typographic features (Open Type functionalities) are very recent and sometimes badly supported, composition grids have just arrived, the fragmentation model (pagination) is still non-existent…</p>
 
-    <p>De même, en matière de typographie, césures, veuves et orphelines, et sauts de page proposent un contrôle pour le moins limité en numérique. Bien que les solutions de lecture paginent par défaut, ces choses sont très médiocrement supportées.</p>
+    <p>Similarly, in terms of typography, caesura, widows and orphans, and page breaks offer a control at least limited in digital. Although the reading solutions page by default, these things are very poorly supported.</p>
 
-    <p>Aussi, <mark class="tldr">il faut bien différencier la «&nbsp;page <abbr class="sc">PDF</abbr>&nbsp;» de la «&nbsp;page <abbr class="sc">EPUB</abbr>&nbsp;».</mark></p>
+    <p>Also, <mark class="tldr">it is necessary to differentiate the “<abbr class="sc">PDF</abbr> page” from the “<abbr class="sc">EPUB</abbr> page.”</mark></p>
 
     <figure class="full-width grid-2" role="group">
       <figure class="grid-component">
@@ -165,7 +165,7 @@
           <source media="(min-width: 1366px)" srcset="assets/1800/wysiwyg-3x.png">
           <img alt="" src="assets/900/wysiwyg.png" />
         </picture>
-        <figcaption>Avec le <abbr class="sc">PDF</abbr>, on obtient ce que l’on voit dans le logiciel&nbsp;<abbr class="sc">P.A.O.</abbr></figcaption>
+        <figcaption>With  <abbr class="sc">PDF</abbr>, what we see is what we get.</figcaption>
       </figure>
 
       <figure class="grid-component">
@@ -174,63 +174,63 @@
           <source media="(min-width: 1366px)" srcset="assets/1800/wysiwygn-3x.png">
           <img alt="" src="assets/900/wysiwygn.png" />
         </picture>
-        <figcaption>Avec <abbr class="sc">EPUB</abbr>, le contenu est redistribué dans un&nbsp;flux.</figcaption>
+        <figcaption>With <abbr class="sc">EPUB</abbr>, content reflows.</figcaption>
       </figure>
     </figure>
 
-    <p><mark class="tldr">En <abbr class="sc">EPUB</abbr> redistribuable, il n’y a pas de dimensions fixes donc de pagination prédéfinie, il n’y a pas d’alignement vertical, il n’y a pas non plus d’image à fond perdu ou de note de bas de page qui fragmentent un paragraphe.</mark></p>
+    <p><mark class="tldr">In reflowable <abbr class="sc">EPUB</abbr>, there are no fixed dimensions, so there is no pre-defined pagination, there is no vertical alignment, there are no full-bleed images or footnotes.</mark></p>
 
-    <p>Le contenu est redistribué en fonction de la taille de l’écran, les contenus se suivent dans un flux continu et non pas fragmenté, paragraphes et images sont des blocs solides et il n’est pas réellement possible de placer certains contenus arbitrairement.</p>
+    <p>The content is reflowed according to the size of the screen, the contents follow in a continuous flow and not fragmented, paragraphs and images are solid blocks and it is not really possible to place certain elements arbitrarily.</p>
 
     <figure class="gutter" role="presentation">
       <img alt="" src="assets/900/indicateur.png" />
     </figure>
 
-    <p>De fait, <mark class="tldr">il n’existe rien dans les moteurs de rendu pour gérer la pagination à l’heure actuelle.</mark> La pagination est un <em>hack,</em> une bidouille réalisée à l’aide des outils <abbr class="sc">CSS</abbr> disponibles dans le but de l’imiter.</p>
+    <p>In fact, <mark class="tldr">There is nothing in rendering engines to handle pagination at the moment.</mark> Pagination is a <em>hack</em>, a <em>hack</em> made using  <abbr class="sc">CSS</abbr> tools built for other purposes.</p>
 
     <div class="full-width inherit-grid demo">
       <div class="demo-settings">
         <label>
-          <input type="checkbox" name="pagination-demo" value="paginated" /><span class="checker"></span> <span>Paginer le texte</span>
+          <input type="checkbox" name="pagination-demo" value="paginated" /><span class="checker"></span> <span>Pagination of text</span>
         </label>
       </div>
       <iframe id="pagination-demo" src="demo.html"></iframe>
     </div>
 
-    <p>Les solutions de lecture modernes utilisent très souvent les colonnes <abbr class="sc">CSS</abbr> pour émuler la pagination. Le problème est que cette spécification n’a jamais été conçue pour cela et n’a pas évolué pour permettre les cas d’usages du livre numérique.</p>
+    <p>Modern reading solutions very often use <abbr class="sc">CSS</abbr> columns to emulate pagination. The problem is that this specification was never designed for this and has not evolved to allow cases of digital book uses.</p>
 
-    <p><mark class="tldr">Le maquettiste ne met pas en pages, il ne fait que donner des indications.</mark> Il faut oublier le concept de <abbr title="What You See is What You Get" class="sc">WYSIWYG</abbr> (Ce que l’on voit à l’écran est le résultat final).</p>
+    <p><mark class="tldr">The model maker does not put in pages, it only gives indications.</mark> We must forget the concept of <abbr title="What You See is What You Get" class="sc">WYSIWYG</abbr> (what you see is what you get).</p>
   </section>
 
   <section>
-    <h2>Pour les développeurs, faire en&nbsp;sorte que tout&nbsp;fonctionne</h2>
+    <h2>For developers, make everything work</h2>
 
-    <p>Le rendu <abbr class="sc">EPUB</abbr> est un processus quelque peu complexe dans le sens où paginer une mise en pages définie arbitrairement peut créer de nombreux problèmes. Il n’est ainsi par rare que des <mark class="tldr">solutions de lecture «&nbsp;surchargent&nbsp;» des styles pour régler des bugs d’affichage.</mark></p>
+    <p>Rendering <abbr class="sc">EPUB</abbr> is a somewhat complex process in that page a arbitrarily defined layout can create many problems. It is thus rare that <mark class="tldr">Reading solutions “overload” styles to set display bugs.</mark></p>
 
-    <p>On parle ici d’<em lang="en">override,</em> soit un remplacement dynamique d’un ou plusieurs styles du fichier <abbr class="sc">EPUB</abbr>. En d’autres termes, c’est comme si les développeurs de la solution de lecture ne prenaient pas en compte ou outrepassaient certaines indications de mise en page.</p>
+    <p>This is referred to as <em lang="en">override,</em> or a dynamic replacement of one or more styles of the <abbr class="sc">EPUB</abbr> file. In other words, it is as if the developers of the reading solution did not take into account or overstep certain layout indications.</p>
 
     <div class="full-width inherit-grid demo">
       <div class="demo-settings">
         <label>
-          <input type="checkbox" name="overrides-demo" value="overridden" /><span class="checker"></span> <span>Appliquer les overrides</span>
+          <input type="checkbox" name="overrides-demo" value="overridden" /><span class="checker"></span> <span>Apply overrides</span>
         </label>
       </div>
       <iframe id="overrides-demo" src="demo.html"></iframe>
     </div>
 
-    <p>Il faut noter que ces <i lang="en">overrides</i> sont rarement gratuits&nbsp;; ils sont le plus souvent prévus pour <mark class="tldr">régler des problèmes réels</mark>&nbsp;: images ou textes coupés, mauvais affichage de certaines polices, marges énormes sur des petits écrans, etc.</p>
+    <p>It should be noted that these <i>overrides</i> are rarely free; They are most often <mark class="tldr">solve real problems</mark>: Images or texts cut, bad display of certain fonts, huge margins on small screens, etc.</p>
 
-    <p>Par ailleurs, certaines solutions de lecture se servent des <i lang="en">overrides</i> pour «&nbsp;rattraper le coup&nbsp;» quand des déclarations <abbr class="sc">CSS</abbr> désactivent des réglages utilisateurs ou fonctionnalités.</p>
+    <p>In addition, some playback solutions use <i lang="en">overrides</i> to "catch up" when <abbr class="sc">CSS</abbr> declarations disable user settings or functionality.</p>
 
-    <p>Il faut bien comprendre que l’on obtiendra <mark class="tldr">jamais le même résultat partout, il faut oublier le «&nbsp;au pixel près&nbsp;».</mark> D’une part, les moteurs de rendu sont bien incapables de mettre en pages de manière totalement identique. D’autre part, les solutions de lecture gèrent ces contenus différemment.</p>
+    <p>It must be understood that <mark class="tldr">Never the same result everywhere, we must forget the "pixel by".</mark> On the one hand, the rendering engines are quite unable to layout completely identically. On the other hand, the reading solutions manage these contents differently.</p>
 
-    <p>Il faut donc accepter la perte de contrôle…</p>
+    <p>We must accept the loss of control…</p>
   </section>
 
   <section>
-    <h2>Le graphiste propose, l’utilisateur dispose</h2>
+    <h2>The designer proposes, the user disposes</h2>
 
-    <p>Cette perte de contrôle est d’autant plus certaine que les réglages utilisateurs sont très largement attendus par les lecteurs.</p>
+    <p>This loss of control is all the more certain as the user settings are very much expected by the readers.</p>
 
     <figure class="full-width inherit-grid floating-caption">
       <picture>
@@ -238,10 +238,10 @@
         <source media="(min-width: 1366px)" srcset="assets/1800/font-3x.png">
         <img alt="Les réglages utilisateurs sont accessibles depuis les menus des l’interface de lecture." src="assets/900/font.png" />
       </picture>
-      <figcaption>Toutes les solutions de lecture ou presque proposent un minimum de réglages&nbsp;utilisateur.</figcaption>
+      <figcaption>All or almost all reading systems offer minimal user settings.</figcaption>
     </figure>
 
-    <p>Depuis le tout début du livre numérique, ceux-ci peuvent <mark class="tldr">composer le texte à leur convenance</mark>&nbsp;: police et taille de caractères, couleur de fond, marges de la page, interlignage et alignement du texte sont autant de variables sur lesquelles ils peuvent intervenir.</p>
+    <p>Since the very beginning of the digital book <mark class="tldr">Compose the text at their convenience</mark>: Font and character size, background color, page margins, leading and aligning text are all variables on which they can work</p>
 
     <figure class="full-width grid-4" role="group" aria-labelledby="settings-cap">
       <figure class="grid-component">
@@ -256,10 +256,11 @@
       <figure class="grid-component">
         <img alt="Texte blanc sur fond gris, taille de caractère maximale." src="assets/900/config4.png" />
       </figure>
-      <figcaption id="settings-cap">Il faut prévoir la mise en pages pour des configurations de lecture extrêmement&nbsp;variées.</figcaption>
+      <figcaption id="settings-cap">It is necessary to plan the layout for extremely varied reading configurations.</figcaption>
     </figure>
 
-    <p>Nous pouvons concevoir ces réglages utilisateurs comme une seconde catégorie d’<i lang="en">overrides,</i> ce qui complique par ailleurs la tâche des développeurs de solutions de lecture.</p>
+    <p>We can design these user settings as a second category of <i>overrides</i>, which further complicates the task of the developers of reading solutions.
+</p>
 
     <div class="full-width inherit-grid demo">
       <div class="demo-settings flex-2">
@@ -267,7 +268,7 @@
           <input type="checkbox" name="settings-demo" value="sans" /><span class="checker"></span> <span>Sans serif</span>
         </label>
         <label>
-          <input type="checkbox" name="settings-demo" value="night" /><span class="checker"></span> <span>Mode nuit</span>
+          <input type="checkbox" name="settings-demo" value="night" /><span class="checker"></span> <span>Night mode</span>
         </label>
       </div>
       <iframe id="settings-demo" src="demo.html"></iframe>
@@ -365,8 +366,9 @@
 
   <footer>
     <p>© 2017, Jiminy Panoz</p>
+    <p>Translated by Google and <Dave Cramer</p>
     <p>Typo «&nbsp;<a href="http://vollkorn-typeface.com">Vollkorn</a>&nbsp;» par Friedrich Althausen</p>
-    <p class="footer-links"><a href="https://github.com/JayPanoz/reflow">Consulter la&nbsp;source</a> | <a href="https://github.com/JayPanoz/reflow/issues">Signaler un&nbsp;bug</a></p>
+    <p class="footer-links"><a href="https://github.com/JayPanoz/reflow">View source</a> | <a href="https://github.com/JayPanoz/reflow/issues">Report a bug</a></p>
   </footer>
 </main>
 <script type="text/javascript" src="js/script.js"></script>
